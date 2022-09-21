@@ -2,7 +2,7 @@ const cookieParser = require('cookie-parser')
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
-const toyRoutes = require('./api/toy/toy.routes')
+const stayRoutes = require('./api/stay/stay.routes')
 const orderRoutes = require('./api/order/order.routes')
 const userRoutes = require('./api/user/user.routes')
 const authRoutes = require('./api/auth/auth.routes')
@@ -23,7 +23,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
-app.use('/api/toy/', toyRoutes)
+app.use('/api/stay/', stayRoutes)
 app.use('/api/order/', orderRoutes)
 app.use('/api/user/', userRoutes)
 app.use('/api/auth/', authRoutes)

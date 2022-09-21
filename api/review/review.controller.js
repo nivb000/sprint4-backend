@@ -1,5 +1,5 @@
 const userService = require('../user/user.service')
-const toyService = require('../toy/server.toy.service')
+const stayService = require('../stay/server.stay.service')
 const authService = require('../auth/auth.service')
 const reviewService = require('./review.service')
 // const socketService = require('../../services/socket.service')s
@@ -43,7 +43,7 @@ async function addReview(req, res) {
         review = await reviewService.add(review)
 
         // prepare the updated review for sending out
-        review.toy = await toyService.getById(review.toyId)
+        review.stay = await stayService.getById(review.stayId)
 
         loggedinUser = await userService.update(loggedinUser)
         review.user = loggedinUser
@@ -53,7 +53,7 @@ async function addReview(req, res) {
         res.cookie('loginToken', loginToken)
 
         delete review.userId
-        delete review.toyId
+        delete review.stayId
 
         // socketService.broadcast({type: 'review-added', data: review, userId: loggedinUser._id})
         // socketService.emitToUser({type: 'review-about-you', data: review, userId: review.aboutUserId})
