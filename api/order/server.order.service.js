@@ -8,13 +8,34 @@ module.exports = {
     add,
     update
 }
-// queryUsertoys
 
-async function query() {
+async function query(filterBy = {}) {
     try {
-
         const collection = await dbService.getCollection('order')
+        const criteria = _buildCriteria(filterBy)
         let orders = await collection.find().toArray()
+        // let orders = await collection.aggregate([
+        //     {
+        //         $lookup:
+        //         {
+        //             localField: 'hostId',
+        //             from: 'user',
+        //             foreignField: '_id',
+        //             as: 'host'
+        //         }
+        //     },
+        //     {
+        //         $unwind: '$host'
+        //     },
+        // ]).toArray()
+        // orders = orders.map(order => {
+        //     console.log('order after aggregate', order);
+        //     return orders
+        //     stay.seller = { _id: review.byUser._id, fullname: review.byUser.fullname, }
+        //     delete review.byUserId
+        //     delete review.aboutUserId
+        //     return review
+        // })
         return orders
     } catch (error) {
         throw error
@@ -55,9 +76,15 @@ async function update(order) {
         let id = ObjectId(order._id)
         delete order._id
         const collection = await dbService.getCollection('order')
-        await collection.updateOne({_id: id},{$set: {...order}})
+        await collection.updateOne({ _id: id }, { $set: { ...order } })
         return order
     } catch (error) {
         throw error
     }
+}
+
+function _buildCriteria(filterBy) {
+    const criteria = {}
+    if (filterBy.byUserId) criteria.byUserId = filterBy.byUserId
+    return criteria
 }

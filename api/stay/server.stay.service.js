@@ -10,9 +10,8 @@ module.exports = {
 }
 // queryUserstays
 
-async function query() {
+async function query(filterBy = {}) {
     try {
-
         const collection = await dbService.getCollection('stay')
         let stays = await collection.find().toArray()
         return stays
@@ -60,4 +59,11 @@ async function update(stay) {
     } catch (error) {
         throw error
     }
+}
+
+function _buildCriteria(filterBy) {
+    const criteria = {}
+    if (filterBy.guests) criteria.guests = filterBy.guests
+    if (filterBy.location) criteria.location = filterBy.location
+    return criteria
 }

@@ -1,13 +1,43 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6524550.css",
-    "main.js": "/static/js/main.c3084181.js",
+    "main.css": "/static/css/main.14bf9056.css",
+    "main.js": "/static/js/main.d8b2d270.js",
+    "static/media/2.jpg": "/static/media/2.9c5151c986e32a3fb9e5.jpg",
+    "static/media/13.jpg": "/static/media/13.55ef3868c6cc4a70ed7c.jpg",
+    "static/media/20.jpg": "/static/media/20.d231f2008c6aa0e00ee2.jpg",
+    "static/media/19.jpg": "/static/media/19.c6dcb7b47705acecd193.jpg",
+    "static/media/5.jpg": "/static/media/5.ae1eff4b8b0823c13897.jpg",
+    "static/media/12.jpg": "/static/media/12.0c6af504ae14a1d2628c.jpg",
+    "static/media/14.jpg": "/static/media/14.b29647a946a59eba1475.jpg",
+    "static/media/8.jpg": "/static/media/8.d620193ad2acb1ee43af.jpg",
+    "static/media/3.jpg": "/static/media/3.4c9975fddb75764bbe83.jpg",
+    "static/media/16.jpg": "/static/media/16.b1c74d612c96b7489db5.jpg",
+    "static/media/15.jpg": "/static/media/15.91c3a899f720d1dcadf9.jpg",
+    "static/media/7.jpg": "/static/media/7.869075ea9743b382a725.jpg",
+    "static/media/18.jpg": "/static/media/18.86653f5ff37cc0a95d75.jpg",
+    "static/media/10.jpg": "/static/media/10.1edf638c44dced968740.jpg",
+    "static/media/4.jpg": "/static/media/4.a86f0d76faf5493e3a85.jpg",
+    "static/media/9.jpg": "/static/media/9.6814e56380947dca7a03.jpg",
+    "static/media/6.jpg": "/static/media/6.d7d3f7809d407cfa919c.jpg",
+    "static/media/1.jpg": "/static/media/1.cfe2b346688f3441dfd3.jpg",
+    "static/media/11.jpg": "/static/media/11.499607c8215d914544ec.jpg",
+    "static/media/17.jpg": "/static/media/17.b7bcc132edbe2e7799b8.jpg",
+    "static/media/Mitr-Regular.ttf": "/static/media/Mitr-Regular.0ae06c243eeaf39df606.ttf",
+    "static/media/Mitr-Light.ttf": "/static/media/Mitr-Light.b870553c6a8fc3d76376.ttf",
+    "static/media/logo.png": "/static/media/logo.3887f5bf7ba8858ab4e1.png",
+    "static/media/airbna-logo.png": "/static/media/airbna-logo.9351f1098d747524a7bc.png",
+    "service-worker.js": "/service-worker.js",
+    "static/media/AirbnbCereal_W_Blk.otf": "/static/media/AirbnbCereal_W_Blk.58572c4e49ed0932f76e.otf",
+    "static/media/AirbnbCereal_W_Bd.otf": "/static/media/AirbnbCereal_W_Bd.a776e4204206c17ac014.otf",
+    "static/media/AirbnbCereal_W_Md.otf": "/static/media/AirbnbCereal_W_Md.81798c6cdace650a8c1a.otf",
+    "static/media/AirbnbCereal_W_Lt.otf": "/static/media/AirbnbCereal_W_Lt.6cb70d2c3d67dfe9b7fc.otf",
+    "static/media/userprofle.jpg": "/static/media/userprofle.b244f3856bda2c227520.jpg",
     "index.html": "/index.html",
-    "main.a6524550.css.map": "/static/css/main.a6524550.css.map",
-    "main.c3084181.js.map": "/static/js/main.c3084181.js.map"
+    "main.14bf9056.css.map": "/static/css/main.14bf9056.css.map",
+    "main.d8b2d270.js.map": "/static/js/main.d8b2d270.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6524550.css",
-    "static/js/main.c3084181.js"
+    "static/css/main.14bf9056.css",
+    "static/js/main.d8b2d270.js"
   ]
 }

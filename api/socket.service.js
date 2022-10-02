@@ -7,29 +7,14 @@ function setupSocketAPI(http) {
         }
     })
     gIo.on('connection', socket => {
+        console.log('connection success')
         socket.on('disconnect', socket => {
             console.log(`Socket disconnected [id: ${socket.id}]`)
         })
-        socket.on('chat-set-topic', topic => {
-            if (socket.toyId === toyId) return
-            if (socket.toyId) {
-                socket.leave(socket.toyId)
-                console.log(`Socket is leaving topic ${socket.toyId} [id: ${socket.id}]`)
-            }
-            socket.join(toyId)
-            socket.toyId = toyId
-        })
-        socket.on('chat-send-msg', msg => {
-            console.log(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
-            // emits to all sockets:
-            // gIo.emit('chat addMsg', msg)
-            // emits only to sockets in the same room
-            gIo.to(socket.toyId).emit('chat-add-msg', msg)
-        })
-        socket.on('user-watch', userId => {
-            console.log(`user-watch from socket [id: ${socket.id}], on user ${userId}`)
-            socket.join('watching:' + userId)
-
+        socket.on('order-updated', msg => {
+            console.log(`Order updated from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
+            // gIo.to(socket.toyId).emit('chat-add-msg', msg)
+            emit('chat-add-msg', msg)
         })
         socket.on('set-user-socket', userId => {
             console.log(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
@@ -57,7 +42,6 @@ async function emitToUser({ type, data, userId }) {
         socket.emit(type, data)
     } else {
         console.log(`No active socket for user: ${userId}`)
-        // _printSockets()
     }
 }
 
