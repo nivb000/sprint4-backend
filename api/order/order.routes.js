@@ -5,7 +5,7 @@ const router = express.Router()
 
 module.exports = router
 
-router.get('/', getOrders)
+router.get('/', requireAuth, getOrders)
 router.get('/:id', getOrderById)
 router.post('/', requireAuth, addOrder)
 router.put('/:id', requireAuth, updateOrder)

@@ -6,15 +6,13 @@ function setupSocketAPI(http) {
             origin: '*',
         }
     })
-    gIo.on('connection', socket => {
-        console.log('connection success')
+    gIo.on('connect', socket => {
         socket.on('disconnect', socket => {
             console.log(`Socket disconnected [id: ${socket.id}]`)
         })
-        socket.on('order-updated', msg => {
+        socket.on('order-updated', order => {
             console.log(`Order updated from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
-            // gIo.to(socket.toyId).emit('chat-add-msg', msg)
-            emit('chat-add-msg', msg)
+            emitToUser({type: 'order-status-updated', data: order ,userId: order.buyer._id})
         })
         socket.on('set-user-socket', userId => {
             console.log(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
