@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.14bf9056.css",
-    "main.js": "/static/js/main.30a499fd.js",
+    "main.css": "/static/css/main.cc956186.css",
+    "main.js": "/static/js/main.daa620d4.js",
     "static/media/2.jpg": "/static/media/2.9c5151c986e32a3fb9e5.jpg",
     "static/media/13.jpg": "/static/media/13.55ef3868c6cc4a70ed7c.jpg",
     "static/media/20.jpg": "/static/media/20.d231f2008c6aa0e00ee2.jpg",
@@ -33,11 +33,11 @@
     "static/media/AirbnbCereal_W_Lt.otf": "/static/media/AirbnbCereal_W_Lt.6cb70d2c3d67dfe9b7fc.otf",
     "static/media/userprofle.jpg": "/static/media/userprofle.b244f3856bda2c227520.jpg",
     "index.html": "/index.html",
-    "main.14bf9056.css.map": "/static/css/main.14bf9056.css.map",
-    "main.30a499fd.js.map": "/static/js/main.30a499fd.js.map"
+    "main.cc956186.css.map": "/static/css/main.cc956186.css.map",
+    "main.daa620d4.js.map": "/static/js/main.daa620d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.14bf9056.css",
-    "static/js/main.30a499fd.js"
+    "static/css/main.cc956186.css",
+    "static/js/main.daa620d4.js"
   ]
 }

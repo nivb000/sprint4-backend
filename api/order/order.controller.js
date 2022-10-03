@@ -10,7 +10,7 @@ module.exports = {
 
 async function getOrders(req, res) {
     try {
-        const orders = await orderService.query()
+        const orders = await orderService.query(req.query)
         res.json(orders)
     } catch (error) {
         res.status(500).send({ error: 'Failed to get all orders' })
@@ -20,8 +20,8 @@ async function getOrders(req, res) {
 async function getOrderById(req, res) {
     try {
         const { id } = req.params
-        const car = await orderService.getById(id)
-        res.json(car)
+        const order = await orderService.getById(id)
+        res.json(order)
     } catch (error) {
         res.status(500).send({ error: 'Failed to get order' })
     }

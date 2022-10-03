@@ -13,7 +13,7 @@ async function query(filterBy = {}) {
     try {
         const collection = await dbService.getCollection('order')
         const criteria = _buildCriteria(filterBy)
-        let orders = await collection.find().toArray()
+        let orders = await collection.find(criteria).toArray()
         // let orders = await collection.aggregate([
         //     {
         //         $lookup:
@@ -85,6 +85,6 @@ async function update(order) {
 
 function _buildCriteria(filterBy) {
     const criteria = {}
-    if (filterBy.byUserId) criteria.byUserId = filterBy.byUserId
+    if (filterBy.hostId) criteria.hostId = filterBy.hostId
     return criteria
 }
